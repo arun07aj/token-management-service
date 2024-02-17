@@ -15,10 +15,10 @@ public class Patient {
     @Column(unique = true)
     private String opNumber;
     private String dateOfBirth;
-    private String gender;
+    private GenderType gender;
     private String phoneNumber;
 
-    public Patient(Long id, String name, String opNumber, String dateOfBirth, String gender, String phoneNumber) {
+    public Patient(Long id, String name, String opNumber, String dateOfBirth, GenderType gender, String phoneNumber) {
         this.id = id;
         this.name = name;
         this.opNumber = opNumber;
@@ -62,11 +62,11 @@ public class Patient {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public String getGender() {
+    public GenderType getGender() {
         return gender;
     }
 
-    public void setGender(String gender) {
+    public void setGender(GenderType gender) {
         this.gender = gender;
     }
 
